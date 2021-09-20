@@ -1,0 +1,32 @@
+---
+title: "CovExpTools"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{CovExpTools}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(CovExpTools)
+```
+
+```{r}
+ToeplitzMat(c(1,2,3))
+ToeplitzMat(cumprod(c(1,rep(0.7,5))))
+ToeplitzMat(c(1,0.1,0,0))
+```
+
+```{r}
+AR1_mat(0.5,5)
+AR1_mat(0.5,7,3)
+```
+
+
